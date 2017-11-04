@@ -1,0 +1,11 @@
+{%extends 'base.html'%}
+
+{%block content%}
+	
+{%for amigo in amigos%}
+	<div>
+		<a href="/amigos/{{amigo.slug}}">{{amigo.nombre}}</a>
+	</div>
+{%endfor%}
+
+{%endblock content%}

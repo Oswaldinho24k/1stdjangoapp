@@ -1,0 +1,32 @@
+{%extends 'base.html'%}
+
+{%block content%}
+
+<style>
+	.imagenDetail {
+		width: 50vw;
+		height: 50vh;
+		border-radius: 50%;
+	}
+
+	.alineadoAlCentro {
+		text-align: center;
+	}
+</style>
+	
+	<div class="uk-card uk-card-default uk-grid-collapse uk-child-width-1-2@s uk-margin" uk-grid>
+    <div class="uk-card-media-left uk-cover-container">
+        <img src="{{post.imagen.url}}" alt="" uk-cover>
+        <canvas width="600" height="400"></canvas>
+    </div>
+    <div>
+        <div class="uk-card-body">
+            <h3 class="uk-card-title">{{post.titulo}}</h3>
+                <p>{{post.descripcion}}</p>
+                <p>No. de Likes: {{post.likes}}</p>
+        </div>
+    </div>
+</div>
+
+    
+{%endblock content%}
